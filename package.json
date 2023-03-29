@@ -1,38 +1,42 @@
 {
-	"name": "vue-create-component",
-	"description": "Create vue component from CLI",
-	"version": "0.0.1",
-	"license": "MIT",
-	"bin": {
-		"vue-create-component": "index.js",
-		"vuecreate": "index.js"
-	},
-	"author": {
-		"name": "Nikola Stankovic",
-		"email": "stankovicnikola@icloud.com",
-		"url": "/"
-	},
-	"keywords": [
-		"vue-create-component",
-		"Nikola Stankovic"
-	],
-	"files": [
-		"index.js",
-		"utils"
-	],
-	"scripts": {
-		"format": "prettier --write \"./**/*.{js,json}\""
-	},
-	"dependencies": {
-		"chalk": "^4.1.2",
-		"cli-alerts": "^1.2.2",
-		"cli-handle-error": "^4.4.0",
-		"cli-handle-unhandled": "^1.1.1",
-		"cli-meow-help": "^3.1.0",
-		"cli-welcome": "^2.2.2",
-		"meow": "^9.0.0"
-	},
-	"devDependencies": {
-		"prettier": "^2.8.7"
-	}
+  "name": "vue-create-component",
+  "description": "Create vue component from CLI",
+  "version": "0.0.1",
+  "license": "MIT",
+  "bin": {
+    "vue-create-component": "index.js",
+    "vuecreate": "index.js"
+  },
+  "author": {
+    "name": "Nikola Stankovic",
+    "email": "stankovicnikola@icloud.com",
+    "url": "/"
+  },
+  "keywords": [
+    "vue-create-component",
+    "Nikola Stankovic"
+  ],
+  "files": [
+    "index.js",
+    "utils"
+  ],
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-alerts": "^1.2.2",
+    "cli-handle-error": "^4.4.0",
+    "cli-handle-unhandled": "^1.1.1",
+    "cli-meow-help": "^3.1.0",
+    "cli-welcome": "^2.2.2",
+    "meow": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7"
+  }
 }

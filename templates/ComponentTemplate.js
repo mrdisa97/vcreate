@@ -11,4 +11,4 @@ module.exports.ComponentTemplate = (templateName, lang = '') => {
   
   <style${lang ? ` lang="${lang}"` : ''}></style>
   `;
-}
+};
