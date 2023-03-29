@@ -6,7 +6,7 @@ module.exports.ComponentTemplate = (templateName, lang = '') => {
   </template>
   
   <script${lang ? ` lang="${lang}"` : ''} setup>
-    // Import statements go here
+    // Scripts here
   </script>
   
   <style${lang ? ` lang="${lang}"` : ''}></style>
