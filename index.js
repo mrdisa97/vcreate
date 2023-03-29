@@ -60,6 +60,20 @@ const { clear, debug, view, lang } = flags;
         process.exit(1);
       }
     }
+  } else if (baseDir) {
+    try {
+      fs.mkdirSync(path.join(baseDir), { recursive: true });
+    } catch (error) {
+      if (error.code !== 'EEXIST') {
+        console.log(chalk.bgRed.white('ERROR'));
+        console.log(
+          `${chalk.red(
+            'ERROR:'
+          )} An error occurred while creating the folder: ${error.message}`
+        );
+        process.exit(1);
+      }
+    }
   }
 
   // Check if the component file already exists

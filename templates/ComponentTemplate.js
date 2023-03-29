@@ -1,7 +1,7 @@
 module.exports.ComponentTemplate = (templateName, lang = '') => {
   return `<template>
-    <div>
-      ${templateName}
+    <div class="${templateName.toLowerCase()}">
+      <h1>${templateName}</h1>
     </div>
   </template>
   
@@ -9,6 +9,10 @@ module.exports.ComponentTemplate = (templateName, lang = '') => {
     // Scripts here
   </script>
   
-  <style${lang ? ` lang="${lang}"` : ''}></style>
+  <style>
+    .${templateName.toLowerCase()}{
+      /* Styling here */
+    }
+  </style>
   `;
 };
