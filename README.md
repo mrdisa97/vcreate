@@ -1,4 +1,4 @@
-![](https://badgen.net/badge/Version/0.0.2/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
+![](https://badgen.net/badge/Version/0.0./f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
 # vcreate
 vcreate is a small command-line tool that makes it easy to create Vue.js components. It supports the latest Composition API syntax and can insert `lang="scss"` in styles or `lang="ts"` in script tag.
 
@@ -7,6 +7,23 @@ vcreate is a small command-line tool that makes it easy to create Vue.js compone
 - Supports latest Composition API syntax
 - Can insert lang="scss" in styles
 
+## Installation
+You can install vcreate using either `npm` or `yarn`.
+
+#### npm
+To install vcreate globally using npm, run the following command:
+```
+npm i -g vcreate
+```
+
+---
+#### yarn
+To install vcreate using yarn, run the following command
+```
+yarn add vcreate
+```
+
+That's it! You should now have vcreate installed on your system and be ready to start using it. If you encounter any issues during the installation process, please open a [GitHub issue](https://github.com/mrdisa97/vcreate/issues) for help.
 ## Usage
 
 To use vcreate, simply run the following command in your terminal:
