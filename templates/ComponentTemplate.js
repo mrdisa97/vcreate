@@ -1,4 +1,4 @@
-export const ComponentTemplate = (templateName, lang = '', sass = false) => {
+export const ComponentTemplate = (templateName, lang = '', scss = false) => {
   return `<template>
     <div class="${templateName.toLowerCase()}">
       <h1>${templateName}</h1>
@@ -9,7 +9,7 @@ export const ComponentTemplate = (templateName, lang = '', sass = false) => {
     // Scripts here
   </script>
   
-  <style${sass ? ` lang="sass"` : ''}>
+  <style${scss ? ` lang="scss"` : ''}>
     .${templateName.toLowerCase()}{
       /* Styling here */
     }

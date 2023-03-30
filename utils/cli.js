@@ -18,7 +18,7 @@ const flags = {
     alias: `l`,
     desc: `Lang for the script tag lang="ts"`
   },
-  sass: {
+  scss: {
     type: `boolean`,
     default: false,
     desc: `Use sass in your style tag lang="scss"`

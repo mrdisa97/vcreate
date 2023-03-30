@@ -1,7 +1,7 @@
 {
   "name": "vcreate",
   "description": "Create vue component from CLI for more options type `vcreate help`",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "bin": {
