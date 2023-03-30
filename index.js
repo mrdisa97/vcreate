@@ -19,18 +19,44 @@ const input = cli.input;
 const flags = cli.flags;
 const { lang, sass } = flags;
 
-(async () => {
-  input.includes(`help`) && cli.showHelp(0);
+function handleError(message, exitCode = 1) {
+  console.log(chalk.bgRed.white(' ERROR '));
+  console.log(`${chalk.red('MESSAGE:')} ${message}`);
+  // eslint-disable-next-line no-process-exit
+  process.exit(exitCode);
+}
 
+(async () => {
+  const validOptions = ['component', 'c', 'view', 'v'];
+  const inputOptions = input.filter(option => validOptions.includes(option));
+
+  // Help option
+  if (input.includes('help')) {
+    cli.showHelp(0);
+  }
+
+  // Check if the user just typed vcreate
+  if (input.length === 0) {
+    await initCli();
+    return;
+  }
+
+  // Options and component name validation
+  if (inputOptions.length === 0) {
+    handleError('No valid options provided');
+  } else if (inputOptions.length === 1 && !input[1]) {
+    handleError('Component name is missing');
+  }
+
+  // Options
   if (
-    input.includes(`component`) ||
-    input.includes('c') ||
-    input.includes('view') ||
-    input.includes('v')
+    inputOptions.includes('component') ||
+    inputOptions.includes('c') ||
+    inputOptions.includes('view') ||
+    inputOptions.includes('v')
   ) {
     // Determine the folder and file name for the new component
-    const view = input.includes('view');
-    const v = input.includes('v');
+    const view = inputOptions.includes('view') || inputOptions.includes('v');
     const inputArr = input[1].split('.');
     let folderName = inputArr.slice(0, inputArr.length - 1).join('/');
     let componentName = inputArr[inputArr.length - 1];
@@ -42,43 +68,32 @@ const { lang, sass } = flags;
     const fileName = `${componentName}.vue`;
 
     // Determine the path where the component file should be created
-    const baseDir = view || v ? 'src/views' : 'src/components';
+    const baseDir = view ? 'src/views' : 'src/components';
     const folderPath = folderName ? path.join(baseDir, folderName) : baseDir;
     const filePath = folderName ? path.join(folderPath, fileName) : path.join(baseDir, fileName);
 
     // If folderName is not empty, we need to create the folder if it doesn't exist
-    if (folderName) {
+    if (inputArr.length > 0) {
       try {
-        fs.mkdirSync(path.join(baseDir, folderName), { recursive: true });
+        fs.mkdirSync(folderPath, { recursive: true });
       } catch (error) {
         if (error.code !== 'EEXIST') {
-          console.log(chalk.bgRed.white('ERROR'));
-          console.log(
-            `${chalk.red('ERROR:')} An error occurred while creating the folder: ${error.message}`
-          );
-          process.exit(1);
+          handleError(`An error occurred while creating the folder: ${error.message}`);
         }
       }
-    } else if (baseDir) {
-      // Checks if the baseDir (components | views) folder exists
+    } else if (!fs.existsSync(baseDir)) {
       try {
-        fs.mkdirSync(path.join(baseDir), { recursive: true });
+        fs.mkdirSync(baseDir, { recursive: true });
       } catch (error) {
         if (error.code !== 'EEXIST') {
-          console.log(chalk.bgRed.white('ERROR'));
-          console.log(
-            `${chalk.red('ERROR:')} An error occurred while creating the folder: ${error.message}`
-          );
-          process.exit(1);
+          handleError(`An error occurred while creating the folder: ${error.message}`);
         }
       }
     }
 
     // Check if the component file already exists
     if (fs.existsSync(filePath)) {
-      console.log(chalk.bgRed.bold(' ERROR '));
-      console.log(`${chalk.red('ERROR:')} The file ${filePath} already exists.`);
-      process.exit(1);
+      handleError(`The file ${filePath} already exists.`);
     } else {
       // Create the component file
       fs.writeFileSync(filePath, ComponentTemplate(componentName, lang, sass));
@@ -87,9 +102,5 @@ const { lang, sass } = flags;
       console.log(`${chalk.green.bold('PATH:')} ${filePath}`);
       console.log(`${chalk.green.bold('MESSAGE:')} Component ${componentName} created!`);
     }
-  }
-
-  if (input.length === 0) {
-    initCli();
   }
 })();

@@ -12,6 +12,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'node/no-unpublished-import': 'off'
   }
 };
