@@ -36,9 +36,9 @@ This will create a component in `views/folder-name/Component.vue`
 | `view`     | Make component in views folder, required component name after command |
 
 #### List of options/flags
-| Option     | Alias | Description                             |
-| ---------- | ----- | --------------------------------------- |
-| `--help`   | `h`   | Show CLI help                           |
-| `--version`| `v`   | Show the version of current CLI         |
-| `--lang`   | `l`   | Lang for the script tag `lang="ts"`     |
-| `--scss`   |  /    | Use sass in your style tag `lang="scss"`|
+| Option     | Alias  | Description                                            |
+| ---------- | ------ | ------------------------------------------------------ |
+| `--help`   | `-h`   | Show CLI help                                          |
+| `--version`| `-v`   | Show the version of current CLI                        |
+| `--lang`   | `-l`   | Lang for the script tag, you need to pass lang `-l ts` |
+| `--scss`   |  -/    | Use sass in your style tag `lang="scss"`               |
