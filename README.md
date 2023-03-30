@@ -63,3 +63,4 @@ We appreciate all contributions, whether they are small bug fixes or major featu
 Thank you for your contributions!
 
 ## License
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
