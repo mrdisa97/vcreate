@@ -1,6 +1,6 @@
 ![](https://badgen.net/badge/Version/0.0.1/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
 # vcreate
-Small tool for creating VUE components from CLI
+vcreate is a small command-line tool that makes it easy to create Vue.js components. It supports the latest Composition API syntax and can insert `lang="scss"` in styles or `lang="ts"` in script tag.
 
 ## List of features
 - Easy to use
@@ -8,11 +8,13 @@ Small tool for creating VUE components from CLI
 - Can insert lang="scss" in styles
 
 ## Usage
+
+To use vcreate, simply run the following command in your terminal:
 ```
 $ vcreate <command> 'component' [option]
 ```
 ---
-So if you want to create a component run:
+If you want to create a component, run:
 ```
 vcreate component folder-name.component
 ```
@@ -36,9 +38,26 @@ This will create a component in `views/folder-name/Component.vue`
 | `view`     | Make component in views folder, required component name after command |
 
 #### List of options/flags
-| Option     | Alias  | Description                                            |
-| ---------- | ------ | ------------------------------------------------------ |
-| `--help`   | `-h`   | Show CLI help                                          |
-| `--version`| `-v`   | Show the version of current CLI                        |
-| `--lang`   | `-l`   | Lang for the script tag, you need to pass lang `-l ts` |
-| `--scss`   |  -/    | Use sass in your style tag `lang="scss"`               |
+| Option     | Alias  | Description                                                             |
+| ---------- | ------ | ----------------------------------------------------------------------- |
+| `--help`   | `-h`   | Show CLI help                                                           |
+| `--version`| `-v`   | Show the version of current CLI                                         |
+| `--lang`   | `-l`   | Lang for the script tag; use `-l ts` to specify TypeScript, for example |
+| `--scss`   |   /    | Use sass in your style tag (`lang="scss"`)                              |
+
+
+## How to Contribute
+Thank you for your interest in contributing to this project! Your help is essential to making it better.
+
+If you would like to contribute, please follow these steps:
+
+1. Fork the repository and clone it to your local machine.
+2. Create a new branch with a descriptive name for your changes: `git checkout -b my-new-feature.`
+3. Make your changes and test them thoroughly.
+4. Commit your changes: `git commit -am 'Add some feature'`.
+5. Push to the branch: git push origin my-new-feature.
+6. Open a pull request to the main branch and provide a detailed description of your changes.
+
+We appreciate all contributions, whether they are small bug fixes or major features. If you have any questions or need help getting started, please don't hesitate to reach out to us.
+
+Thank you for your contributions!
