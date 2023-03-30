@@ -40,7 +40,7 @@ vcreate component ComponentName
 This will create a new component named `ComponentName.vue` in the `components/` directory of your project.
 
 #### Creating a component in a subdirectory
-If you want to create a component inside a subdirectory of the components/ directory, you can use the following syntax:
+If you want to create a component inside a subdirectory of the `components/` directory, you can use the following syntax:
 ```
 vcreate view fname.ComponentName
 ```
