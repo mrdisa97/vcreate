@@ -1,7 +1,7 @@
 {
   "name": "vcreate",
   "description": "Create vue component from CLI for more options type `vcreate help`",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -14,7 +14,8 @@
   ],
   "files": [
     "index.js",
-    "utils"
+    "utils",
+    "templates"
   ],
   "scripts": {
     "format": "prettier --write \"./**/*.{js,json}\"",
