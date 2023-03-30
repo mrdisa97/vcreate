@@ -2,24 +2,13 @@ const meow = require('meow');
 const meowHelp = require('cli-meow-help');
 
 const flags = {
-  clear: {
+  help: {
     type: `boolean`,
     default: false,
-    alias: `c`,
-    desc: `Clear the console`
+    alias: `h`,
+    desc: `Print help info`
   },
-  noClear: {
-    type: `boolean`,
-    default: false,
-    desc: `Don't clear the console`
-  },
-  debug: {
-    type: `boolean`,
-    default: false,
-    alias: `d`,
-    desc: `Print debug info`
-  },
-  view: {
+  version: {
     type: `boolean`,
     alias: `v`,
     desc: `Should file be saved in views folder`
@@ -28,15 +17,24 @@ const flags = {
     type: `string`,
     alias: `l`,
     desc: `Lang for the script and the style tag`
+  },
+  sass: {
+    type: `boolean`,
+    default: false,
+    desc: `Use Sass in your component`
   }
 };
 
 const commands = {
-  help: { desc: `Print help info` }
+  help: { desc: `Print help info` },
+  component: { desc: `Make component, required component name after command` },
+  view: {
+    desc: `Make component in view folder, required component name after command`
+  }
 };
 
 const helpText = meowHelp({
-  name: `vuecreate`,
+  name: `vcr`,
   flags,
   commands
 });

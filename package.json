@@ -1,11 +1,11 @@
 {
   "name": "vue-create-component",
-  "description": "Create vue component from CLI",
+  "description": "Create vue component from CLI for more options type `vcr help`",
   "version": "0.0.1",
   "license": "MIT",
   "bin": {
     "vue-create-component": "index.js",
-    "vuecreate": "index.js"
+    "vcr": "index.js"
   },
   "author": {
     "name": "Nikola Stankovic",
