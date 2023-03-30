@@ -7,11 +7,7 @@
   "bin": {
     "vcreate": "index.js"
   },
-  "author": {
-    "name": "Nikola Stankovic",
-    "email": "stankovicnikola@icloud.com",
-    "url": "https://github.com/mrdisa97"
-  },
+  "author": "Nikola Stankovic <stankovicnikola@icloud.com> (https://github.com/mrdisa97)",
   "keywords": [
     "vcreate",
     "Nikola Stankovic"
@@ -39,5 +35,14 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.7"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdisa97/vcreate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrdisa97/vcreate/issues"
+  },
+  "homepage": "https://github.com/mrdisa97/vcreate#readme"
 }
