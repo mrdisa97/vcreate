@@ -4,7 +4,7 @@
  * vcreate
  * Create vue component from CLI
  *
- * @author Nikola Stankovic </>
+ * @author Nikola Stankovic <https://www.github.com/mrdisa97>
  */
 
 import initCli from './utils/init.js';
