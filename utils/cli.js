@@ -6,22 +6,22 @@ const flags = {
     type: `boolean`,
     default: false,
     alias: `h`,
-    desc: `Print help info`
+    desc: `Show CLI help`
   },
   version: {
     type: `boolean`,
     alias: `v`,
-    desc: `Should file be saved in views folder`
+    desc: `Show the version of current CLI`
   },
   lang: {
     type: `string`,
     alias: `l`,
-    desc: `Lang for the script and the style tag`
+    desc: `Lang for the script tag lang="ts"`
   },
   sass: {
     type: `boolean`,
     default: false,
-    desc: `Use Sass in your component`
+    desc: `Use sass in your style tag lang="scss"`
   }
 };
 
@@ -29,7 +29,7 @@ const commands = {
   help: { desc: `Print help info` },
   component: { desc: `Make component, required component name after command` },
   view: {
-    desc: `Make component in view folder, required component name after command`
+    desc: `Make component in views folder, required component name after command`
   }
 };
 
