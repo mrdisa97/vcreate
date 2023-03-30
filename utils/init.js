@@ -8,7 +8,7 @@ const initCli = () => {
     title: `vcreate`,
     tagLine: `by Nikola Stankovic`,
     description: 'Create vue component from CLI for more options type `vcreate help`',
-    version: '0.0.5',
+    version: '0.0.6',
     bgColor: '#36BB09',
     color: '#000000',
     bold: true,
