@@ -30,20 +30,35 @@ To use vcreate, simply run the following command in your terminal:
 ```
 $ vcreate <command> 'component' [option]
 ```
----
-If you want to create a component, run:
-```
-vcreate component folder-name.component
-```
-This will create a component in `components/folder-name/Component.vue`
+List of commands are available down in the documentation
 
 ---
-If you want to create a component in views folder run:
+To create a Vue.js component using vcreate, simply run the following command:
 ```
-vcreate view folder-name.component
+vcreate component ComponentName
 ```
-This will create a component in `views/folder-name/Component.vue`
+This will create a new component named `ComponentName.vue` in the `components/` directory of your project.
 
+#### Creating a component in a subdirectory
+If you want to create a component inside a subdirectory of the components/ directory, you can use the following syntax:
+```
+vcreate view fname.ComponentName
+```
+This will create a new directory named fname inside the components/ directory and a new component named `ComponentName.vue` inside the `components/fname/` directory. You can also create multiple subflders by typing `sub1.sub2.sub3.component` etc.
+
+#### Creating a component in the views directory
+To create a component in the `views/` directory instead of the `components/` directory, you can use the following command:
+```
+vcreate view ComponentName
+```
+This will create a new component named `ComponentName.vue` in the `views/` directory of your project.
+
+#### Creating a component in a subdirectory of the views directory
+To create a component inside a subdirectory of the `views/` directory, you can use the following syntax:
+```
+vcreate view fname.componentName
+```
+This will create a new directory named `fname` inside the `views/` directory and a new component named `ComponentName.vue` inside the `views/fname/` directory.
 
 ## List of commands and options
 
