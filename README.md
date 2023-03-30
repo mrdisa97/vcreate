@@ -61,3 +61,5 @@ If you would like to contribute, please follow these steps:
 We appreciate all contributions, whether they are small bug fixes or major features. If you have any questions or need help getting started, please don't hesitate to reach out to us.
 
 Thank you for your contributions!
+
+## License
