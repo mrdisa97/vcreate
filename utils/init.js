@@ -7,7 +7,7 @@ module.exports = () => {
 
   // First run, show welcome message and create init flag file
   welcome({
-    title: `vue-create-component`,
+    title: `vcreate`,
     tagLine: `by Nikola Stankovic`,
     description: pkg.description,
     version: pkg.version,

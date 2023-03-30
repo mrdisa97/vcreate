@@ -1,2 +1,2 @@
-# vue-create-component
+# vcreate
 Create VUE component from CLI

@@ -34,7 +34,7 @@ const commands = {
 };
 
 const helpText = meowHelp({
-  name: `vcr`,
+  name: `vcreate`,
   flags,
   commands
 });

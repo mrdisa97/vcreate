@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * vue-create-component
+ * vcreate
  * Create vue component from CLI
  *
  * @author Nikola Stankovic </>
