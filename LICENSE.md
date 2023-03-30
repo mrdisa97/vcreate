@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 mrdisa97 <github.com/mrdisa97>
+Copyright (c) 2023 [mrdisa97](https://github.com/mrdisa97)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
