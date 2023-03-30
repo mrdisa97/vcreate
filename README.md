@@ -17,6 +17,7 @@ So if you want to create a component run:
 vcreate component folder-name.component
 ```
 This will create a component in `components/folder-name/Component.vue`
+
 ---
 If you want to create a component in views folder run:
 ```
