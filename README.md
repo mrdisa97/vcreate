@@ -76,6 +76,7 @@ This will create a new directory named `fname` inside the `views/` directory and
 | `--version`| `-v`   | Show the version of current CLI                                         |
 | `--lang`   | `-l`   | Lang for the script tag; use `-l ts` to specify TypeScript, for example |
 | `--scss`   |   /    | Use sass in your style tag (`lang="scss"`)                              |
+| `--scoped` |   /    | Add scoped attribute to `<style>` tag                                   |
 
 
 ## How to Contribute
