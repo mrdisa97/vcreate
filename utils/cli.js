@@ -22,6 +22,11 @@ const flags = {
     type: `boolean`,
     default: false,
     desc: `Use sass in your style tag lang="scss"`
+  },
+  scoped: {
+    type: `boolean`,
+    default: false,
+    desc: `Use scoped style`
   }
 };
 
