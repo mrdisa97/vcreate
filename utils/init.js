@@ -1,19 +1,19 @@
-const welcome = require('cli-welcome');
-const pkg = require('./../package.json');
-const unhandled = require('cli-handle-unhandled');
+import welcome from 'cli-welcome';
+import unhandled from 'cli-handle-unhandled';
 
-module.exports = () => {
+const initCli = () => {
   unhandled();
 
-  // First run, show welcome message and create init flag file
   welcome({
     title: `vcreate`,
     tagLine: `by Nikola Stankovic`,
-    description: pkg.description,
-    version: pkg.version,
+    description: 'Create vue component from CLI for more options type `vcreate help`',
+    version: '0.0.1',
     bgColor: '#36BB09',
     color: '#000000',
     bold: true,
     clear: false
   });
 };
+
+export default initCli;

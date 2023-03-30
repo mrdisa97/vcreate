@@ -2,14 +2,14 @@
 
 module.exports = {
   env: {
-    browser: true,
-    commonjs: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:node/recommended'],
   overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
   rules: {
     'prettier/prettier': 'error'

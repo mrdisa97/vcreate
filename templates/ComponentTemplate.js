@@ -1,4 +1,4 @@
-module.exports.ComponentTemplate = (templateName, lang = '', sass = false) => {
+export const ComponentTemplate = (templateName, lang = '', sass = false) => {
   return `<template>
     <div class="${templateName.toLowerCase()}">
       <h1>${templateName}</h1>

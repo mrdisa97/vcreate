@@ -7,13 +7,13 @@
  * @author Nikola Stankovic </>
  */
 
-const init = require('./utils/init');
-const cli = require('./utils/cli');
-const fs = require('node:fs');
-const process = require('node:process');
-const path = require('path');
-const { ComponentTemplate } = require('./templates/ComponentTemplate');
-const chalk = require('chalk');
+import initCli from './utils/init.js';
+import cli from './utils/cli.js';
+import fs from 'node:fs';
+import process from 'node:process';
+import path from 'path';
+import { ComponentTemplate } from './templates/ComponentTemplate.js';
+import chalk from 'chalk';
 
 const input = cli.input;
 const flags = cli.flags;
@@ -90,6 +90,6 @@ const { lang, sass } = flags;
   }
 
   if (input.length === 0) {
-    init();
+    initCli();
   }
 })();

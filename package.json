@@ -3,8 +3,8 @@
   "description": "Create vue component from CLI for more options type `vcreate help`",
   "version": "0.0.1",
   "license": "MIT",
+  "type": "module",
   "bin": {
-    "vcreate": "index.js",
     "vcreate": "index.js"
   },
   "author": {
@@ -36,6 +36,7 @@
   "devDependencies": {
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.7"
   }
