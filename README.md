@@ -44,7 +44,7 @@ If you want to create a component inside a subdirectory of the `components/` dir
 ```
 vcreate view fname.ComponentName
 ```
-This will create a new directory named fname inside the components/ directory and a new component named `ComponentName.vue` inside the `components/fname/` directory. You can also create multiple subflders by typing `sub1.sub2.sub3.component` etc.
+This will create a new directory named `fname` inside the `components/` directory and a new component named `ComponentName.vue` inside the `components/fname/` directory. You can also create multiple subflders by typing `sub1.sub2.sub3.component` etc.
 
 #### Creating a component in the views directory
 To create a component in the `views/` directory instead of the `components/` directory, you can use the following command:
