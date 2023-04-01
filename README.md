@@ -1,4 +1,4 @@
-![](https://badgen.net/badge/Version/0.0.6/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
+![](https://badgen.net/badge/Version/0.0.7/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
 # vcreate
 vcreate is a small command-line tool that makes it easy to create Vue.js components. It supports the latest Composition API syntax and can insert `lang="scss"` in styles or `lang="ts"` in script tag.
 
