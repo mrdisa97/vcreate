@@ -70,13 +70,14 @@ This will create a new directory named `fname` inside the `views/` directory and
 | `view`     | Make component in views folder, required component name after command |
 
 #### List of options/flags
-| Option     | Alias  | Description                                                             |
-| ---------- | ------ | ----------------------------------------------------------------------- |
-| `--help`   | `-h`   | Show CLI help                                                           |
-| `--version`| `-v`   | Show the version of current CLI                                         |
-| `--lang`   | `-l`   | Lang for the script tag; use `-l ts` to specify TypeScript, for example |
-| `--scss`   |   /    | Use sass in your style tag (`lang="scss"`)                              |
-| `--scoped` |   /    | Add scoped attribute to `<style>` tag                                   |
+| Option     | Alias  | Description                                                                   |
+| ---------- | ------ | ----------------------------------------------------------------------------- |
+| `--help`   | `-h`   | Show CLI help                                                                 |
+| `--version`| `-v`   | Show the version of current CLI                                               |
+| `--type`   | `-t`   | Choose scripts type, aviliable options: `composition` (default) and `options` |
+| `--lang`   | `-l`   | Lang for the script tag; use `-l ts` to specify TypeScript, for example       |
+| `--scss`   |   /    | Use sass in your style tag (`lang="scss"`)                                    |
+| `--scoped` |   /    | Add scoped attribute to `<style>` tag                                         |
 
 
 ## How to Contribute

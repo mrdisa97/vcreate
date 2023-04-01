@@ -1,6 +1,9 @@
 import welcome from 'cli-welcome';
 import unhandled from 'cli-handle-unhandled';
 
+/**
+ * Function to show welcome message on application init
+ */
 const initCli = () => {
   unhandled();
 

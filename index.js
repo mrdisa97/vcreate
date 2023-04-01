@@ -17,8 +17,13 @@ import chalk from 'chalk';
 
 const input = cli.input;
 const flags = cli.flags;
-const { lang, scss, scoped } = flags;
+const { type, lang, scss, scoped } = flags;
 
+/**
+ * Function to handle error messages
+ * @param {String} message
+ * @param {Number} exitCode
+ */
 function handleError(message, exitCode = 1) {
   console.log(chalk.bgRed.white(' ERROR '));
   console.log(`${chalk.red('MESSAGE:')} ${message}`);
@@ -26,6 +31,9 @@ function handleError(message, exitCode = 1) {
   process.exit(exitCode);
 }
 
+/**
+ * Main function for the application
+ */
 (async () => {
   const validOptions = ['component', 'c', 'view', 'v'];
   const inputOptions = input.filter(option => validOptions.includes(option));
@@ -96,7 +104,7 @@ function handleError(message, exitCode = 1) {
       handleError(`The file ${filePath} already exists.`);
     } else {
       // Create the component file
-      fs.writeFileSync(filePath, ComponentTemplate(componentName, lang, scss, scoped));
+      fs.writeFileSync(filePath, ComponentTemplate(componentName, type, lang, scss, scoped));
       console.log(`${chalk.bgGreen.bold(' COMPONENT CREATED ')} 🎉`);
       console.log('\n');
       console.log(`${chalk.green.bold('PATH:')} ${filePath}`);

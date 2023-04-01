@@ -1,6 +1,7 @@
 import meow from 'meow';
 import meowHelp from 'cli-meow-help';
 
+// Define flags for the application
 const flags = {
   help: {
     type: `boolean`,
@@ -12,6 +13,12 @@ const flags = {
     type: `boolean`,
     alias: `v`,
     desc: `Show the version of current CLI`
+  },
+  type: {
+    type: `string`,
+    alias: `t`,
+    default: `composition`,
+    desc: `Specify which type of script you want to include in the generated code.`
   },
   lang: {
     type: `string`,
@@ -30,6 +37,7 @@ const flags = {
   }
 };
 
+// Define application commands
 const commands = {
   help: { desc: `Print help info` },
   component: { desc: `Make component, required component name after command` },
@@ -38,12 +46,14 @@ const commands = {
   }
 };
 
+// Define help cli
 const helpText = meowHelp({
   name: `vcreate`,
   flags,
   commands
 });
 
+// Define aviliable options
 const options = {
   inferType: true,
   description: false,
